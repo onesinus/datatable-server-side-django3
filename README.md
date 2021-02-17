@@ -13,16 +13,15 @@ PyPi: https://pypi.org/project/datatables-server-side-django/
 ### let's say i have a file app_customer/urls.<span>py</span>
 ```python
 from django.conf.urls import url
-from app_customer.views import view_customer
-
+from app_customer.views import list, load, detail
 app_name = 'app_customer'
 
 urlpatterns = [
-    url(r'^customer/$', view_customer.list.Execute.as_view(), name='customer-list'),
-    url(r'^load/customer/$', view_customer.load.Execute.as_view(), name='load-customer'),
+    url(r'^customer/$', list.Execute.as_view(), name='customer-list'),
+    url(r'^load/customer/$', load.Execute.as_view(), name='load-customer'),
 
     # In case you need detail page, if you don't need just ignore all code about detail page
-    url(r'^customer/detail/(?P<pk>[\w-]+)/$', view_customer.detail.Execute.as_view(), name='customer-detail'),
+    url(r'^customer/detail/(?P<pk>[\w-]+)/$', detail.Execute.as_view(), name='customer-detail'),
 
 ]
 ```
@@ -61,8 +60,6 @@ class Execute(generic.DetailView):
     import datetime
 
     class ViewLoadCustomer(DatatablesServerSideView):
-        permission_required = 'app_customer.view_view_customer'
-
         model = Customer
         columns = ['id', 'first_name', 'last_name', 'email', 'gender']
         searchable_columns = ['first_name', 'last_name', 'email', 'gender']
