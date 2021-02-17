@@ -37,7 +37,7 @@ from app_customer import models
 
 class Execute(generic.ListView):
     model = models.Customer
-    template_name = 'app_customer/customer/list.html'
+    template_name = 'app_customer/list.html'
 ```
 
 #### let's say i have a file app_customer/views/detail<span>.py</span>
@@ -48,7 +48,7 @@ from app_customer import models
 
 class Execute(generic.DetailView):
     model = models.Customer
-    template_name = 'app_customer/customer/detail.html'
+    template_name = 'app_customer/detail.html'
 ```
 
 ### Example view for load data and configuration for datatables such as columns, searchable_columns, etc
