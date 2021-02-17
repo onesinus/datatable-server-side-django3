@@ -1,23 +1,21 @@
 from distutils.core import setup
 
-# read the contents of your README file
-from os import path
-this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
-
 setup(
-  name = 'datatables_server_side_django_3',
+  name = 'datatables_server_side_django',
   packages = ['_dt_server_side'],
-  version = '0.2',
+  version = '0.0.6',
   license='MIT',
   description = 'Datatables Server Side package for django 3',
-  long_description=long_description,
-  long_description_content_type='text/markdown',
+  long_description="""
+    This project used to make implementation server side processing in datatables easier
+    \n
+    For Detail & Documentation Link: https://github.com/onesinus/datatable-server-side-django3/blob/main/README.md
+  """,
+  long_description_content_type="text/markdown",
   author = 'Onesinus SPT',
   author_email = 'onesinus231@gmail.com',
   url = 'https://github.com/onesinus/datatable-server-side-django3',
-  download_url = 'https://github.com/onesinus/datatable-server-side-django3/archive/0.2.zip',
+  download_url = 'https://github.com/onesinus/datatable-server-side-django3/archive/0.0.6.zip',
   keywords = ['DATATABLES', 'PYTHON', 'DJANGO', 'DJANGO3', 'SERVERSIDE', 'DJANGO-DATATABLES'],
   install_requires=[
     'six'
