@@ -21,7 +21,7 @@ app_name = 'app_customer'
 
 urlpatterns = [
     url(r'^customer/$', list.Execute.as_view(), name='customer-list'),
-    url(r'^load/customer/$', load.Execute.as_view(), name='load-customer'),
+    url(r'^load/customer/$', load.ViewLoadCustomer.as_view(), name='load-customer'),
 
     # In case you need detail page, if you don't need just ignore all code about detail page
     url(r'^customer/detail/(?P<pk>[\w-]+)/$', detail.Execute.as_view(), name='customer-detail'),
