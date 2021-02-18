@@ -7,6 +7,9 @@ Code Source: https://github.com/monnierj/django-datatables-server-side
 
 PyPi: https://pypi.org/project/datatables-server-side-django/
 
+# Installation
+## pip install datatables-server-side-django
+
 # Exampe Usage 
 
 ## In Your Url
