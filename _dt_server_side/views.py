@@ -175,6 +175,6 @@ class DatatablesServerSideView(View):
                 query_param_name = model_column.get_field_search_path()
 
                 search_filters |=\
-                    Q(**{query_param_name+'__istartswith': search_value})
+                    Q(**{query_param_name+'__icontains': search_value})
 
         return qs.filter(search_filters)
