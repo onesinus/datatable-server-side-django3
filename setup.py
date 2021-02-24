@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
   name = 'datatables_server_side_django',
   packages = ['_dt_server_side'],
-  version = '0.0.6',
+  version = '0.0.7',
   license='MIT',
   description = 'Datatables Server Side package for django 3',
   long_description="""
@@ -15,7 +15,7 @@ setup(
   author = 'Onesinus SPT',
   author_email = 'onesinus231@gmail.com',
   url = 'https://github.com/onesinus/datatable-server-side-django3',
-  download_url = 'https://github.com/onesinus/datatable-server-side-django3/archive/0.0.6.zip',
+  download_url = 'https://github.com/onesinus/datatable-server-side-django3/archive/0.0.7.zip',
   keywords = ['DATATABLES', 'PYTHON', 'DJANGO', 'DJANGO3', 'SERVERSIDE', 'DJANGO-DATATABLES'],
   install_requires=[
     'six'
